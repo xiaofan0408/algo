@@ -6,6 +6,40 @@ package com.xiaofan0408.swordoffer;
 public class ReplaceBlank {
 
 
+    public String replaceSpace(StringBuffer str) {
+        if(str == null || str.length() == 0) {
+            return "";
+        }
+        int i = str.length();
+        int numOfblank = 0;
+        for(int k=0;k< str.length(); k++) {
+            char ch = str.charAt(k);
+            if (ch == ' ') {
+                numOfblank++;
+            }
+        }
+        int newLength = i + numOfblank * 2;
+        int indexOrigin = i - 1;
+        int indexNew = newLength - 1;
+        str.setLength(newLength);
+        while (indexOrigin>=0&& indexNew > indexOrigin){
+            if (str.charAt(indexOrigin) == ' ') {
+                str.setCharAt(indexNew, '0');
+                indexNew --;
+                str.setCharAt(indexNew, '2');
+                indexNew--;
+                str.setCharAt(indexNew, '%');
+                indexNew --;
+            } else {
+                str.setCharAt(indexNew, str.charAt(indexOrigin));
+                indexNew --;
+            }
+            indexOrigin --;
+        }
+        return str.toString();
+    }
+
+
     private static int replaceBlank(char[] string, int i) {
         if (string == null || string.length == 0) {
             return 0;
