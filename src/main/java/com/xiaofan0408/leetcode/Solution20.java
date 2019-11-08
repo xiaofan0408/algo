@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * @author xuzefan  2019/8/8 13:44
  */
-public class ValidParentheses {
+public class Solution20 {
 
     public boolean isValid(String s) {
         if (s.length() == 0) {
@@ -50,7 +50,7 @@ public class ValidParentheses {
     }
 
     public static void main(String[] args) {
-        ValidParentheses validParentheses = new ValidParentheses();
+        Solution20 validParentheses = new Solution20();
         System.out.println(validParentheses.isValid("()"));
         System.out.println(validParentheses.isValid("()[]{}"));
         System.out.println(validParentheses.isValid("(]"));

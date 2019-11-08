@@ -3,7 +3,7 @@ package com.xiaofan0408.leetcode;
 /**
  * @author xuzefan  2019/8/8 11:22
  */
-public class PalindromeNumber9 {
+public class Solution9 {
 
     public boolean isPalindrome(int x) {
         if ( x < 0){
@@ -27,7 +27,7 @@ public class PalindromeNumber9 {
     }
 
     public static void main(String[] args) {
-        PalindromeNumber9 palindromeNumber9 = new PalindromeNumber9();
+        Solution9 palindromeNumber9 = new Solution9();
         System.out.println(palindromeNumber9.isPalindrome(121));
         System.out.println(palindromeNumber9.isPalindrome(-121));
         System.out.println(palindromeNumber9.isPalindrome(10));

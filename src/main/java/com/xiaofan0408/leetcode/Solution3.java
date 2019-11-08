@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @author xuzefan  2019/8/8 9:59
  */
-public class LengthOfLongestSubstring {
+public class Solution3 {
 
     public int lengthOfLongestSubstring(String s) {
         int maxLength = 0;
@@ -30,7 +30,7 @@ public class LengthOfLongestSubstring {
     }
 
     public static void main(String[] args) {
-        LengthOfLongestSubstring lengthOfLongestSubstring = new LengthOfLongestSubstring();
+        Solution3 lengthOfLongestSubstring = new Solution3();
         System.out.println(lengthOfLongestSubstring.lengthOfLongestSubstring("pwwkew"));
     }
 }

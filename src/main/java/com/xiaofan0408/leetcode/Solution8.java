@@ -1,13 +1,12 @@
 package com.xiaofan0408.leetcode;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author xuzefan  2019/8/8 14:36
  */
-public class StringToInteger {
+public class Solution8 {
     public int myAtoi(String str) {
         List<Character> characters = new ArrayList<>();
        for (int i = 0;i < str.length();i++) {
@@ -65,7 +64,7 @@ public class StringToInteger {
     }
 
     public static void main(String[] args) {
-        StringToInteger stringToInteger = new StringToInteger();
+        Solution8 stringToInteger = new Solution8();
         System.out.println(stringToInteger.myAtoi("42"));
         System.out.println(stringToInteger.myAtoi("   -42"));
         System.out.println(stringToInteger.myAtoi("4193 with words"));

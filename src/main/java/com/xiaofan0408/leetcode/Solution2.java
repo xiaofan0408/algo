@@ -3,7 +3,7 @@ package com.xiaofan0408.leetcode;
 /**
  * @author xuzefan  2019/7/29 14:07
  */
-public class AddTwoNumbers {
+public class Solution2 {
 
       public static class ListNode {
           int val;
@@ -35,7 +35,7 @@ public class AddTwoNumbers {
     }
 
     public static void test3() {
-        AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
+        Solution2 addTwoNumbers = new Solution2();
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(9);
         l2.next = new ListNode(9);
@@ -47,7 +47,7 @@ public class AddTwoNumbers {
     }
 
     public static void test2() {
-        AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
+        Solution2 addTwoNumbers = new Solution2();
         ListNode l1 = new ListNode(5);
         ListNode l2 = new ListNode(5);
         ListNode res = addTwoNumbers.addTwoNumbers(l1,l2);
@@ -57,7 +57,7 @@ public class AddTwoNumbers {
         }
     }
     public static void test1() {
-        AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
+        Solution2 addTwoNumbers = new Solution2();
         ListNode l1 = new ListNode(2);
         l1.next = new ListNode(4);
         l1.next.next = new ListNode(3);

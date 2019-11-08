@@ -1,12 +1,11 @@
 package com.xiaofan0408.leetcode;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
  * @author xuzefan  2019/9/30 16:40
  */
-public class PlusOne {
+public class Solution66 {
     public int[] plusOne(int[] digits) {
         int[] result = new int[digits.length + 1];
         int len = digits.length - 1;
@@ -25,7 +24,7 @@ public class PlusOne {
     }
 
     public static void main(String[] args) {
-        PlusOne plusOne = new PlusOne();
+        Solution66 plusOne = new Solution66();
         int[] arr = new int[]{8,9,9};
         int[] res =plusOne.plusOne(arr);
         Arrays.stream(res).forEach( i -> {

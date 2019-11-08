@@ -3,7 +3,7 @@ package com.xiaofan0408.leetcode;
 /**
  * @author xuzefan  2019/8/8 11:37
  */
-public class LongestCommonPrefix {
+public class Solution14 {
     public String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0) {
             return "";

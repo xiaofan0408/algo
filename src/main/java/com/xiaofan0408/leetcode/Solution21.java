@@ -13,7 +13,7 @@ class ListNode {
     }
 }
 
-public class MergeTwoSortedList {
+public class Solution21 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) {
             return null;
@@ -56,7 +56,7 @@ public class MergeTwoSortedList {
         ListNode l2_3 = new ListNode(4);
         l2_1.next = l2_2;
         l2_2.next = l2_3;
-        MergeTwoSortedList mergeTwoSortedList = new MergeTwoSortedList();
+        Solution21 mergeTwoSortedList = new Solution21();
         ListNode res = mergeTwoSortedList.mergeTwoLists(l1_1,l2_1);
         while (res!=null) {
             System.out.print(res.val );

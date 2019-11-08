@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * @author xuzefan  2019/7/29 11:45
  */
-public class TwoSum {
+public class Solution1 {
 
     public int[] twoSum(int[] nums, int target) {
         Map<Integer,Integer> map = new HashMap<>();
@@ -24,7 +24,7 @@ public class TwoSum {
         return null;
     }
     public static void main(String[] args) {
-        TwoSum twoSum = new TwoSum();
+        Solution1 twoSum = new Solution1();
         int[] nums = {0,4,3,0};
         int target = 0;
         int[] result = twoSum.twoSum(nums,target);

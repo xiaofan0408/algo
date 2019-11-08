@@ -3,7 +3,7 @@ package com.xiaofan0408.leetcode;
 /**
  * @author xuzefan  2019/8/8 11:00
  */
-public class Reverse {
+public class Solution7 {
     public int reverse(int x) {
         if ( x == 0){
             return 0;
@@ -26,7 +26,7 @@ public class Reverse {
     }
 
     public static void main(String[] args) {
-        Reverse reverse = new Reverse();
+        Solution7 reverse = new Solution7();
         System.out.println(reverse.reverse(1534236469));
     }
 }
