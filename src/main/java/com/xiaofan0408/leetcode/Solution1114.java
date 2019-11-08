@@ -7,7 +7,36 @@ import java.util.concurrent.Semaphore;
 /**
  * @author xuzefan  2019/8/8 16:09
  */
-public class Foo {
+
+public class Solution1114{
+    public static void main(String[] args) throws InterruptedException {
+        Foo printInOrder = new Foo();
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
+        executorService.submit(() -> {
+            try {
+                printInOrder.first(() -> System.out.println("first"));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        executorService.submit(() -> {
+            try {
+                printInOrder.third(() -> System.out.println("third"));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        executorService.submit(() -> {
+            try {
+                printInOrder.second(() -> System.out.println("second"));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+}
+
+class Foo {
 
     private Semaphore lock1;
     private Semaphore lock2;
@@ -36,31 +65,5 @@ public class Foo {
         // printThird.run() outputs "third". Do not change or remove this line.
         lock2.acquire();
         printThird.run();
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        Foo printInOrder = new Foo();
-        ExecutorService executorService = Executors.newFixedThreadPool(3);
-        executorService.submit(() -> {
-            try {
-                printInOrder.first(() -> System.out.println("first"));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        });
-        executorService.submit(() -> {
-            try {
-                printInOrder.third(() -> System.out.println("third"));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        });
-        executorService.submit(() -> {
-            try {
-                printInOrder.second(() -> System.out.println("second"));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        });
     }
 }
