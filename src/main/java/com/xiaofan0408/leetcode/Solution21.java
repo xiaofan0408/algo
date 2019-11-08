@@ -5,15 +5,16 @@ package com.xiaofan0408.leetcode;
  */
 
 
-class ListNode {
+
+
+public class Solution21 {
+    static class ListNode {
     int val;
     ListNode next;
     ListNode(int x) {
         val = x;
     }
 }
-
-public class Solution21 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) {
             return null;

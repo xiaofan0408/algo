@@ -34,36 +34,37 @@ public class Solution1114{
             }
         });
     }
+    static class Foo {
+
+        private Semaphore lock1;
+        private Semaphore lock2;
+
+        public Foo() {
+            lock1 = new Semaphore(0);
+            lock2 = new Semaphore(0);
+        }
+
+        public void first(Runnable printFirst) throws InterruptedException {
+            // printFirst.run() outputs "first". Do not change or remove this line.
+            printFirst.run();
+            lock1.release();
+        }
+
+        public void second(Runnable printSecond) throws InterruptedException {
+
+            // printSecond.run() outputs "second". Do not change or remove this line.
+            lock1.acquire();
+            printSecond.run();
+            lock2.release();
+        }
+
+        public void third(Runnable printThird) throws InterruptedException {
+
+            // printThird.run() outputs "third". Do not change or remove this line.
+            lock2.acquire();
+            printThird.run();
+        }
+    }
 }
 
-class Foo {
 
-    private Semaphore lock1;
-    private Semaphore lock2;
-
-    public Foo() {
-        lock1 = new Semaphore(0);
-        lock2 = new Semaphore(0);
-    }
-
-    public void first(Runnable printFirst) throws InterruptedException {
-        // printFirst.run() outputs "first". Do not change or remove this line.
-        printFirst.run();
-        lock1.release();
-    }
-
-    public void second(Runnable printSecond) throws InterruptedException {
-
-        // printSecond.run() outputs "second". Do not change or remove this line.
-        lock1.acquire();
-        printSecond.run();
-        lock2.release();
-    }
-
-    public void third(Runnable printThird) throws InterruptedException {
-
-        // printThird.run() outputs "third". Do not change or remove this line.
-        lock2.acquire();
-        printThird.run();
-    }
-}
