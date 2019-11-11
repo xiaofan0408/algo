@@ -43,6 +43,9 @@ public class Solution15 {
                 tmp.add(num);
                 tmp.add(res);
                 result.add(tmp);
+                while (i + 1 < nums.length && nums[i] == nums[i + 1]){
+                    i++;
+                }
             }
         }
         return result;
@@ -51,6 +54,6 @@ public class Solution15 {
     public static void main(String[] args) {
         Solution15 solution15 = new Solution15();
         System.out.println(solution15.threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
-        System.out.println(solution15.threeSum(new int[]{0,0,0,0}));
+        System.out.println(solution15.threeSum(new int[]{0,0,0,0,1,-1}));
     }
 }
