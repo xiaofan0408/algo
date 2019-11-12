@@ -5,20 +5,32 @@ package com.xiaofan0408.leetcode;
  */
 public class Solution67 {
     public String addBinary(String a, String b) {
-        if(a == null || a.isEmpty()) {
-            return b;
+        StringBuilder result = new StringBuilder();
+        int al = a.length()-1;
+        int bl = b.length()-1;
+        int carry = 0;
+        while( al >=0  || bl >=0 )
+        {
+            int sum = carry;
+            if(al >= 0)
+            {
+                sum += (a.charAt(al) - '0');
+                al--;
+            }
+            if(bl >= 0)
+            {
+                sum += (b.charAt(bl) - '0');
+                bl--;
+            }
+            result.append(sum%2);
+            carry = sum /2;
         }
-        if(b == null || b.isEmpty()) {
-            return a;
+
+        if(carry !=0 ) {
+            result.append(1);
         }
-        StringBuffer result = new StringBuffer();
-        int i = 0;
-        int len1 = a.length();
-        int len2 = b.length();
-        while (len1 > -1 || len2 > -1) {
-            int aValue = len1 > -1 ? Character.getNumericValue(a.charAt(len1)) : 0;
-            int bValue = len2 > -1 ? Character.getNumericValue(b.charAt(len2)) : 0;
-        }
+
         return result.reverse().toString();
+
     }
 }
