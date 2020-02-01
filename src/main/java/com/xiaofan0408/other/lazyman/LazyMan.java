@@ -1,6 +1,7 @@
 package com.xiaofan0408.other.lazyman;
 
 import java.util.LinkedList;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
@@ -43,12 +44,12 @@ public class LazyMan {
                    System.out.println("Wake up after " + i);
                    process();
                },i, TimeUnit.SECONDS);
-               while (!scheduledFuture.isDone()){
-                   try {
-                       TimeUnit.MILLISECONDS.sleep(100);
-                   } catch (InterruptedException e) {
-                       e.printStackTrace();
-                   }
+               try {
+                   scheduledFuture.get();
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               } catch (ExecutionException e) {
+                   e.printStackTrace();
                }
            }
        });
@@ -74,12 +75,12 @@ public class LazyMan {
                     System.out.println("Wake up after " + i);
                     process();
                 },i, TimeUnit.SECONDS);
-                while (!scheduledFuture.isDone()){
-                    try {
-                        TimeUnit.MILLISECONDS.sleep(100);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                try {
+                    scheduledFuture.get();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
                 }
             }
         });
@@ -97,7 +98,7 @@ public class LazyMan {
 //         new LazyMan("Hank");
         // Hi! This is Hank!
 
-//         new LazyMan("Hank").sleep(4).eat("dinner");
+         new LazyMan("Hank").sleep(4).eat("dinner");
         // Hi! This is Hank!
         //等待10秒..
         // Wake up after 10
@@ -107,7 +108,7 @@ public class LazyMan {
         // Eat dinner~
         // Eat supper~
 
-         new LazyMan("Hank").sleepFirst(5).eat("supper");
+//         new LazyMan("Hank").sleepFirst(2).eat("supper");
         //等待5秒
         // Wake up after 5
         // Hi This is Hank!
