@@ -1,19 +1,8 @@
 package com.xiaofan0408.leetcode;
 
-public class Solution617 {
+import com.xiaofan0408.util.TreeNode;
 
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
+public class Solution617 {
 
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         if(t1 == null && t2 == null){

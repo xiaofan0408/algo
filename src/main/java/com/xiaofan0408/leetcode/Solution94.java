@@ -1,5 +1,7 @@
 package com.xiaofan0408.leetcode;
 
+import com.xiaofan0408.util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,15 +9,6 @@ import java.util.List;
  * @author xuzefan  2020/4/20 13:55
  */
 public class Solution94 {
-
-
-      public static class TreeNode {
-          int val;
-          TreeNode left;
-          TreeNode right;
-          public TreeNode(int x) { val = x; }
-      }
-
 
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
