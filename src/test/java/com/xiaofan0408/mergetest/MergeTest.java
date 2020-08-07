@@ -2,6 +2,7 @@ package com.xiaofan0408.mergetest;
 
 import com.xiaofan0408.other.sort.SortUtil;
 import com.xiaofan0408.other.sort.merge.MergeSort;
+import com.xiaofan0408.other.sort.merge.MultiMergeSort;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -28,9 +29,11 @@ public class MergeTest {
 
     private int[] lens = new int[]{1, 3, 5, 7, 11, 13, 17, 19, 23, 29, 1024, 1 << 13, 1 << 17, 1 << 19, 1 << 20};
 
-//    private int[] lens = new int[]{7};
+    private int[] lens2 = new int[]{7};
 
     private MergeSort mergeSort = new MergeSort();
+
+    private MultiMergeSort multiMergeSort = new MultiMergeSort();
 
     @Test
     public void runTest(){
@@ -39,6 +42,20 @@ public class MergeTest {
             src = SortUtil.prepare(src);
             int[] expect = Arrays.copyOf(src,src.length);
             mergeSort.sort(src);
+            Arrays.sort(expect);
+            for (int j=0; j<src.length; j++) {
+                Assert.assertEquals(src[j],expect[j]);
+            }
+        }
+    }
+
+    @Test
+    public void runMultiTest(){
+        for (int i = 0;i<lens.length;i++){
+            int[] src = new int[lens[i]];
+            src = SortUtil.prepare(src);
+            int[] expect = Arrays.copyOf(src,src.length);
+            multiMergeSort.sort(src);
             Arrays.sort(expect);
             for (int j=0; j<src.length; j++) {
                 Assert.assertEquals(src[j],expect[j]);
