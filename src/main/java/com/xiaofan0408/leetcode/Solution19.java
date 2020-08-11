@@ -1,5 +1,7 @@
 package com.xiaofan0408.leetcode;
 
+import com.xiaofan0408.util.ListNode;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,11 +10,6 @@ import java.util.Map;
  */
 public class Solution19 {
 
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
     public ListNode removeNthFromEnd(ListNode head, int n) {
         Map<Integer, ListNode> map = new HashMap<>();
         ListNode cur = head;

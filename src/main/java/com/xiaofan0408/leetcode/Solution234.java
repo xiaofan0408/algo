@@ -1,15 +1,12 @@
 package com.xiaofan0408.leetcode;
 
+import com.xiaofan0408.util.ListNode;
+
 /**
  * @author xuzefan  2019/12/16 18:08
  */
 public class Solution234 {
 
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
 
     public boolean isPalindrome(ListNode head) {
         if (head == null || head.next == null) {

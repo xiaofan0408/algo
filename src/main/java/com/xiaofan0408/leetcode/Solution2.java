@@ -1,15 +1,12 @@
 package com.xiaofan0408.leetcode;
 
+import com.xiaofan0408.util.ListNode;
+
 /**
  * @author xuzefan  2019/7/29 14:07
  */
 public class Solution2 {
 
-      public static class ListNode {
-          int val;
-          ListNode next;
-          ListNode(int x) { val = x; }
-      }
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
           ListNode head = new ListNode(0);
           ListNode ans = head;

@@ -1,12 +1,9 @@
 package com.xiaofan0408.leetcode;
 
+import com.xiaofan0408.util.ListNode;
+
 public class Solution206 {
 
-    static class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) { val = x; }
-    }
 
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {

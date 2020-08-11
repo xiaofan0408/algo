@@ -1,15 +1,12 @@
 package com.xiaofan0408.leetcode;
 
+import com.xiaofan0408.util.ListNode;
+
 /**
  * @author xuzefan  2019/11/12 10:34
  */
 public class Solution83 {
 
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
 
     public ListNode deleteDuplicates(ListNode head) {
         if(head == null || head.next == null){

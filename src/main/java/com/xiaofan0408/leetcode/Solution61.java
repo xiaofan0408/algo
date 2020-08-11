@@ -1,15 +1,11 @@
 package com.xiaofan0408.leetcode;
 
+import com.xiaofan0408.util.ListNode;
+
 /**
  * @author xuzefan  2019/11/12 9:59
  */
 public class Solution61 {
-
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
 
     public ListNode rotateRight(ListNode head, int k) {
         if (head == null || head.next == null|| k<=0 ) {

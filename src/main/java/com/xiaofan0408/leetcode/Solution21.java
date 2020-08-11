@@ -1,5 +1,7 @@
 package com.xiaofan0408.leetcode;
 
+import com.xiaofan0408.util.ListNode;
+
 /**
  * @author xuzefan  2019/8/8 15:39
  */
@@ -8,13 +10,6 @@ package com.xiaofan0408.leetcode;
 
 
 public class Solution21 {
-    static class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-        val = x;
-    }
-}
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) {
             return null;

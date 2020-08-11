@@ -1,15 +1,12 @@
 package com.xiaofan0408.leetcode;
 
+import com.xiaofan0408.util.ListNode;
+
 import java.util.HashSet;
 import java.util.Set;
 
 public class Solution142 {
 
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
 
     public ListNode detectCycle(ListNode head) {
         Set<ListNode> set = new HashSet<>();
